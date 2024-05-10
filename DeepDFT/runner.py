@@ -502,7 +502,7 @@ def main():
             outputs = net(input_dict=batch32)
             loss = criterion(outputs, batch["probe_target"])
             loss.backward()
-            optimizer.step()
+            # optimizer.step()
 
             #with torch.no_grad():
             #    running_loss += loss * batch["probe_target"].shape[0] * batch["probe_target"].shape[1]
